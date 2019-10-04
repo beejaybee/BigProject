@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical-Document</title>
+    <link rel="stylesheet" href="techDoc.css">
+</head>
+<body>
+    <aside>
+    <nav id="navbar">
+        <h1>JS Documentation</h1>
+        <a href="#introduction">Introduction</a>
+        <a href="#what_you_should_already_know">What you should already know</a>
+        <a href="#javascript_and_java">Javascript and Java</a>
+        <a href="#hello_world">Hello World</a>
+        <a href="#variables">Variables</a>
+        <a href="#declaring_variables">Declaring Variables</a>
+        <a href="#variable_scope">Variable scope</a>
+        <a href="#global_variables">Global variables</a>
+    </nav>
+    </aside>
+    <main id="main-doc">
+        <section class="main-section">
+            <h1 id="introduction">Introduction</h1>
+            <p>
+                JavaScript is a cross-platform, object oriented programming language. it is a small and lightweight
+                language. Inside a host environment (for example, a web browser), JavaScript can be connected to the
+                objects of its environment to provide programatic control over them. <br> 
+            </p>
+
+            <p>
+                JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language
+                elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety
+                of purposes by supplementing it with additional objects; for example:   
+            </p>
+
+            <ul>
+
+                <li>
+                    <p>
+                        Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM).
+                        For example, client-side extensions allow an application to place element on an HTML form and respond to user events such as mouse clicks, user-input, and page-Navigation. 
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Server-side JavaScript extends the core language by supplying objects to relevant to running JavaScript on a server.
+                        For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one
+                        invocation to another of the application, or perform file manipulation on a server.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="main-section">
+
+            <h1 id="what_you_should_already_know">What you should already know</h1>
+
+            <p>
+                This guide assume that you have the following basic background:
+            </p>
+
+            <ul>
+                <li>
+                    A general understanding that of the internet and the World wide web (WWW).
+                </li>
+
+                <li>
+                    Good working knowledge of Hypetext Markup Language(HTML).
+                </li>
+
+                <li>
+                    Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript. 
+                </li>
+            </ul>
+
+        </section>
+        
+        <section class="main-section">
+            
+            <h1 id="javascript_and_java">Javascript and Java</h1>
+
+            <p>
+                JavaScript and Java are similar in some ways but fundamentally different in others. The JavaScript language resemble Java but
+                does not have Java's static typing and strong type checking. JavaScript follows most Java expresion syntax, naming convetions and
+                basic control-flow constructs which was the reason why it was renamed LiveScript to JavaScript. 
+
+            </p>
+
+            <p>
+                In contrast to Java's compile-time system of classes built by declaration, JavaScript supports a runtime system based on a small
+                number of data types respecting numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of
+                more common class-object based model. The prototype-based model provides dynamic inheritance; that is,
+                what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements.
+                Functions can be properties of objects, executing as loosely typed method.   
+            </p>
+                
+            <p>
+                JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes and methods. You do not
+                have to be concerned with whether methods are public, private, or protected and you do not have to implement interfaces. Variables,
+                parameters, and function return types are not explicitly typed.
+            </p>
+
+        </section>
+        
+        <section class="main-section">
+
+            <h1 id="hello_world">Hello World</h1>
+
+            <p>
+                To get started with writing JavaScript, open the Scratched and write your first "Hello World" JavaScript code.
+            </p>
+
+            <code>
+                function greetMe(yourName) {alert("Hello " + yourName);}
+            </code>
+            <br> <br>
+            <code>
+                greetMe("World");
+            </code>
+
+            <p>
+                Select the code in the pad and hit <kbd>Ctrl+R</kbd> to watch it unfold in your browser.
+            </p>
+        </section>
+        
+        <section class="main-section">
+
+            <h1 id="variables">Variables</h1>
+
+            <p>
+                You use variables as symbolic names for values in your application. The names of variables, called identifiers,
+                conform to certain rules.
+            </p>
+
+            <p>
+                A JavaScript identifier must start with a letter, underscore (_) or dollar sign($);
+                subsequent characters can also be digits(0-9). Because JavaScript is a case sensitive,
+                letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase). 
+            </p>
+        </section>
+    
+        <section class="main-section">
+
+            <h1 id="declaring_variables">Declaring Variables</h1>
+
+            
+            <p>
+                you can declare variables in three ways:  <br><br>
+
+                with the key word var. for example,
+                </p>
+            
+
+            <code>var x = 1;</code>
+
+            <p>
+                This syntax can be used to declare both local and global variables.
+            </p>
+            <p>
+                By simply assigning it a value. for Eample,
+            </p>
+
+            <code>x = 42;</code>
+
+            <p>
+                This always declares a global variable. It generates a script JavaScript warning. You shouldn't use this variant.
+            </p>
+
+            <p>
+                With the keyword let for example, 
+            </p>
+
+            <code>
+                let x = 34;
+            </code>
+            <p>
+                This syntax can be used to declare a block scope local variables. See Variable Scope below.
+            </p>
+
+        </section>
+
+        <section class="main-section">
+
+            <h1 id="variable_scope">Variable scope</h1>
+
+            <p>
+                When you declare a variable outside of any function, it is called a global variable, because it is available to any other code 
+                in the current document. When you declare a variable withinn a function, it is called a local variable, because the scope of x
+                is the function (or global context) within which x is declared, not the block which in this case is an if statement.
+            </p>
+            
+            <code>
+                if (true) {var x = 5;} console.log(5) // 5
+            </code>
+
+            <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code 
+                    in the current document. When you declare a variable withinn a function, it is called a local variable, because the scope of x
+                    is the function (or global context) within which x is declared, not the block which in this case is an if statement.
+            </p>
+
+            <code>
+                    if (true) {let y = 5;} console.log(5) // ReferenceError y is not defined
+            </code>
+
+        </section>
+    
+        <section class="main-section">
+
+            <h1 id="global_variables">Global variables</h1>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, harum! Dicta dignissimos voluptates cupiditate fugit, blanditiis incidunt modi impedit eum corporis reiciendis odit nisi laudantium velit commodi, ea perferendis architecto temporibus magnam! Facilis laboriosam,
+                illo dignissimos iusto alias cupiditate quaerat impedit eum beatae eligendi veritatis quibusdam optio, modi dolorem neque?
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reprehenderit enim minima ut fuga necessitatibus recusandae,
+                provident nulla, quia optio consectetur! Sapiente similique, illum ullam molestiae placeat deleniti aliquid inventore debitis distinctio aspernatur sed? In doloremque sed blanditiis, quas maxime voluptatem recusandae alias sit sunt esse eius, ab magni corporis! Cumque veritatis, voluptate cupiditate doloribus non dignissimos architecto sint nostrum, illo quae quidem magnam cum, officiis vitae autem. Excepturi odio fuga dolorum sit aliquid!
+                Natus aspernatur esse inventore commodi veritatis possimus, vero fugiat numquam vel assumenda laborum dicta distinctio.
+                Error sapiente magni alias neque harum sunt quod odio vero veritatis.
+            </p>
+        </section>
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body{
+    background: silver;
+}
+
+#title{
+    text-align: center;
+}
+#img-div{
+    background: white;
+    text-align: center;
+}
+#image{
+    width: 70vw;
+}
+#img-div p{
+    padding: 10px
+}
+#tribute-info ul{
+    width: 50%;
+
+     margin: 50px 300px;
+}
+
+#tribute-info ul li{
+    margin: 20px;
+    
+}
+#tribute-info h3{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    #tribute-info ul{
+        width: 80%;
+        margin: 20px;
+    }
+}
+#link{
+    text-align: center;
+}
+#link a{
+    color: blue;
+}

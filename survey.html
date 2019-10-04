@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey-Form</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <section id="section">
+        <p id="description">Let us know how we can improve Beejay.js tutorials</p>
+        
+        <form action="" id="survey-form">
+            <div class="preference">
+                <label for="name" id="name-label"><sup>*</sup>Name:</label>
+                <input type="text" name="name" placeholder="Enter your name" id="name" required>
+            </div>
+
+            <div class="preference">
+                <label for="email" id="email-label"><sup>*</sup>Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your mail" required pattern=".+@.+\..+">
+            </div>
+
+            <div class="preference">
+                <label for="number" id="number-label"><sup>*</sup>Age:</label>
+                <input type="number" name="number" placeholder="Age" id="number" required min="18" max="45">
+            </div>
+
+            <div class="drop">
+                <label for="dropdown">Which option best describe you?</label>
+                    <select name="dropdown" id="dropdown">
+                        <option value="amateur">Amateur</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Master">Master</option>
+                    </select>
+            </div>
+        
+            <div class="radio-field">
+
+                <div class="radio-text">
+                    <p>How likely is that you will recommend Beejay.js to a friend? </p>
+                </div>
+            
+                <div>
+                    <div class="recommend">
+                        <input type="radio" name="recommend" id="definitely" value="definitely">
+                        <label class="label" for="definitely">Definitely</label>
+                    </div>
+
+                    <div class="recommend">
+                        <input type="radio" name="recommend" id="maybe" value="maybe">
+                        <label class="label" for="maybe">Maybe</label>
+                    </div> 
+            
+                    <div class="recommend">
+                        <input type="radio" name="recommend" id="not-sure" value="not-sure">
+                        <label class="label not" for="not-sure">No</label>
+                    </div>        
+                </div>
+            </div>
+            <div class="drop">
+                    <label for="dropdown">What did you like most in Bj.js</label>
+                    <select name="dropdown" id="dropdown">
+                        <option value="Classes">Classes</option>
+                        <option value="Tutors">Tutors</option>
+                        <option value="Forums">Forums</option>
+                        <option value="Projects">Projects</option>
+                    </select>
+            </div>
+
+            <div class="checkbox-field">
+                <div class="checkbox-text">
+                    <p>Things that should be improved in the future (check all that applies)</p>
+                </div>
+
+                <div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="front-end">
+                        <label for="front-end">Front-end Project</label>
+                    </div>
+
+                    <div class="checkbox">
+                            <input type="checkbox" name="improvement" value="back-end">
+                            <label for="Back-end">Back-end Project</label>
+                    </div>
+                    <div class="checkbox">
+                            <input type="checkbox" name="improvement" value="data">
+                            <label for="data">Data-Visualization</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="challenges">
+                        <label for="challenges">Challenges</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="open">
+                        <label for="open">Open Source community</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="videos">
+                        <label for="videos">Videos</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="city">
+                        <label for="front-end">City meet ups</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="wiki">
+                        <label for="wiki">Wiki</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="forum">
+                        <label for="forum">Forum</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" name="improvement" value="courses">
+                        <label for="courses">Additional courses</label>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="textarea-field">
+                <label for="comment">Any comments or suggestion?</label>
+                <textarea name="comment" id="comment" cols="30" rows="5">Enter your comment here...
+                </textarea>
+            </div>
+
+            <div class="button">
+                <button type="submit" id="button">Submit</button>
+            </div>
+
+
+        </form>
+</section>
+    <script src="survey.js"></script>
+</body>
+</html>
