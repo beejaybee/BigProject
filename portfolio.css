@@ -198,6 +198,14 @@
     }
 }
 @media screen and (max-width: 576px){
+    #navbar{
+        text-align: end;
+    }
+    #navbar a{
+        margin-right: 30px;
+        padding: 0;
+    }
+    
     .container {
         display: grid;
         grid-template-columns: 1fr;
@@ -225,4 +233,12 @@
         /* margin-top: 50px; */
         padding-top: 50px;
         margin-bottom: 20px;
+    }
+    .font-container a{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 3px;
+        margin-right: 0;
+    }
+
 }
